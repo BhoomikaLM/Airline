@@ -1,0 +1,63 @@
+<div class="container">
+    <br>
+    <h3>BOOK UDAAN TICKET</h3>
+    <br>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" placeholder="Registered Name" required><br>
+                </div>
+                
+                <div class="col-md-12">
+                    <label for="name">Number of tickets to be booked</label>
+                    <input type="number" class="form-control" placeholder="No. of tickets" required><br>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="name">Flight Date</label>
+                    <input type="date" class="form-control" required><br>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputState">Source</label>
+                    <select id="inputState" class="form-select" class="form-control">
+                        <option selected="Select the Source">Choose Source</option>
+                        <option value="Agra">Agra</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Hydrabad">Hydrabad</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="New Delhi">New Delhi</option>
+                        <option value="Mangalore">Mangalore</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Shimla">Shimla</option>
+                    </select><br>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputState">Destination</label>
+                    <select id="inputState" class="form-select" class="form-control" name=t6>
+                        <option selected="Select the Source">Choose Destination</option>
+                        <option value="Agra">Agra</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Hydrabad">Hydrabad</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="New Delhi">New Delhi</option>
+                        <option value="Mangalore">Mangalore</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Shimla">Shimla</option>
+                    </select><br>
+                </div>
+                
+                <div class="botton">
+                    <a id="btn" class="btn btn-primary btn-lg" [routerLink]="['/viewdetails']" role="button">View
+                        Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+

@@ -1,0 +1,71 @@
+<div class="banner">
+    <br>
+    <h3>REGISTRATION</h3>
+    <br>
+    <div class="container">
+        <form (ngSubmit)="createRegister()">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label for="name">First Name</label>
+                            <input type="text" name="first_name" class="form-control" [(ngModel)]="register.first_name"
+                                required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="name">Last Name</label>
+                            <input type="text" name="last_name" class="form-control" [(ngModel)]="register.last_name"
+                                required>
+                            <br>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="name">Age</label>
+                            <input type="number" name="age" class="form-control" [(ngModel)]="register.age"
+                            required>
+                            <br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="name">Phone Number</label>
+                            <input type="number" name="phone" class="form-control" [(ngModel)]="register.phone"
+                            required>
+                            <br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="name">Email</label>
+                            <input type="email" placeholder="example@you.com" name="email" class="form-control" [(ngModel)]="register.email" 
+                            required>
+                            <br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="name">Password</label>
+                            <input type="password" class="form-control" name="password"
+                                placeholder="********" [(ngModel)]="register.password" required><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="name">Confirm Password</label>
+                            <input type="password" class="form-control" 
+                                name="confirm_password" placeholder="********" [(ngModel)]="register.confirm_password" required><br>
+                        </div>
+
+                        <div class="botton">
+                            <a id="btn" class="btn btn-primary btn-lg" [routerLink]="['/home']" role="button">Back
+                            </a>  |
+                            <input type="submit" role="button" class="btn btn-primary btn-lg" value="Register"
+                                id="btn" />
+                        </div>
+                        <span class="text-info">{{message}}</span>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </form>
+    </div>
+</div>
