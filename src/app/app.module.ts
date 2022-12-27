@@ -10,7 +10,6 @@ import { HomeComponent } from './home/home.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { BookComponent } from './book/book.component';
-import { ViewDetailsComponent } from './view-details/view-details.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SeatmatrixComponent } from './seatmatrix/seatmatrix.component';
 import { AboutComponent } from './about/about.component';
@@ -19,6 +18,11 @@ import { CancelComponent } from './cancel/cancel.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FoodComponent } from './food/food.component';
 import { CheckinComponent } from './checkin/checkin.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AddFlightComponent } from './add-flight/add-flight.component';
+import { ViewFlightComponent } from './view-flight/view-flight.component';
+import { EditFlightComponent } from './edit-flight/edit-flight.component';
+import { AllFlightComponent } from './all-flight/all-flight.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,6 @@ import { CheckinComponent } from './checkin/checkin.component';
     UserloginComponent,
     AdminloginComponent,
     BookComponent,
-    ViewDetailsComponent,
     PaymentComponent,
     SeatmatrixComponent,
     AboutComponent,
@@ -36,7 +39,12 @@ import { CheckinComponent } from './checkin/checkin.component';
     CancelComponent,
     RegistrationComponent,
     FoodComponent,
-    CheckinComponent
+    CheckinComponent,
+    ContactUsComponent,
+    AddFlightComponent,
+    ViewFlightComponent,
+    EditFlightComponent,
+    AllFlightComponent
   ],
   imports: [
     BrowserModule,
