@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Flight } from './flight';
+import { Book } from './book';
 
 @Injectable({
     providedIn: 'root'
@@ -11,6 +12,7 @@ export class FlightService {
 
     private basePathFlight = 'http://localhost:8095/rest/flight';
     private basePathBookFlight = 'http://localhost:8095/rest/flight/book';
+    private basePathBook = 'http://localhost:8095/rest/bookticket';
 
     constructor(private http: HttpClient) { }
 
@@ -37,5 +39,21 @@ export class FlightService {
 
   bookFlight(flight: Flight): Observable<any> {
     return this.http.post(`${this.basePathBookFlight}/save`, flight, {responseType: 'text'});
+  }
+  
+  createBook(book: Book): Observable<any> {
+    return this.http.post(`${this.basePathBook}/save`, book, {responseType: 'text'});
+  }
+
+  deleteOneBook(email?: String): Observable<Object> {
+    return this.http.delete(`${this.basePathBook}/remove/${email}`, {responseType: 'text'});
+  }
+
+  getAllBook(): Observable<Book[]> {
+    return this.http.get<Book[]>(`${this.basePathBook}/all`);
+  }  
+  
+  getOneBook(email: string): Observable<Book> {
+    return this.http.get<Book>(`${this.basePathBook}/one/${email}`);
   }
 }

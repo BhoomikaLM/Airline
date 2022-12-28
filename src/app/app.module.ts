@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { BookComponent } from './book/book.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SeatmatrixComponent } from './seatmatrix/seatmatrix.component';
@@ -23,6 +22,8 @@ import { AddFlightComponent } from './add-flight/add-flight.component';
 import { ViewFlightComponent } from './view-flight/view-flight.component';
 import { EditFlightComponent } from './edit-flight/edit-flight.component';
 import { AllFlightComponent } from './all-flight/all-flight.component';
+import { ViewBookdetailsComponent } from './view-bookdetails/view-bookdetails.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,6 @@ import { AllFlightComponent } from './all-flight/all-flight.component';
     NavbarComponent,
     HomeComponent,
     UserloginComponent,
-    AdminloginComponent,
     BookComponent,
     PaymentComponent,
     SeatmatrixComponent,
@@ -44,7 +44,9 @@ import { AllFlightComponent } from './all-flight/all-flight.component';
     AddFlightComponent,
     ViewFlightComponent,
     EditFlightComponent,
-    AllFlightComponent
+    AllFlightComponent,
+    ViewBookdetailsComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

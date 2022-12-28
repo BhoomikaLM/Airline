@@ -1,6 +1,6 @@
 <div class="banner">
     <br>
-    <h3>VIEW FLIGHTS</h3><br>
+    <h3>BOOK FLIGHT</h3><br>
     <table class="table table-hover" >
         <tr class="bg text-white" id="btn">
             <td>FLIGHT ID</td>
@@ -22,11 +22,8 @@
             <td>{{f.travel_time}}</td>
             <td>{{f.fare}}</td>
             <td>
-                <button id="info" class="btn btn-info">Book</button>
+                <button id="info" class="btn btn-info" (click)="bookThisFlight(f.flight_id)">Book</button>
             </td>
         </tr>
     </table>
     </div>
-<div class="botton">
-    <a id="btn" class="btn btn-primary btn-lg" [routerLink]="['/payment']" role="button">Make Payment</a>
-</div>

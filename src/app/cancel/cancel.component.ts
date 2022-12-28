@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
-import { BookService } from '../book.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { FlightService } from '../flight.service';
 
 @Component({
   selector: 'app-cancel',
@@ -10,35 +9,30 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CancelComponent implements OnInit {
   book!: Book;
-  message!: string;
-  email!:string;
 
-  constructor(private service: BookService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private service: FlightService) { }
 
   ngOnInit(): void {
+    this.book = new Book();
+  }
 
-    this.email = this.activatedRoute.snapshot.params['email'];
-    // make service call to get student object
-    this.service.getOneBook(this.email).subscribe(
-      data => {
+  getOneBook() {
+    this.service.getOneBook(this.book.email).subscribe(data => {
       this.book = data;
-      console.log(this.email);
     }, error => {
       console.log(error);
     });
   }
 
-  deleteBook(email: string) {
+
+  deleteBook() {
+    this.getOneBook();
     if (confirm('Do you want to delete?')) {
-      this.service.deleteOneBook(email).subscribe(data => {
-        this.message = data;
-        // this.getOneBook();
+      this.service.deleteOneBook(this.book.email).subscribe(data => {
+        console.log(data);
       }, error => {
         console.log(error);
       });
-    } else {
-      this.message = '';
-    }
+    } 
   }
-  
 }

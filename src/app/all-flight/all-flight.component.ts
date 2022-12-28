@@ -46,4 +46,5 @@ export class AllFlightComponent implements OnInit {
   editFlight(id: number) {
     this.router.navigate(['flightedit', id]);
   }
+  
 }

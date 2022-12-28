@@ -30,22 +30,8 @@ export class ViewFlightComponent implements OnInit {
     );
   }
 
-  deleteFlight(flight_id: number) {
-    if (confirm('Do you want to delete?')) {
-      this.service.deleteOneFlight(flight_id).subscribe(data => {
-        this.message = data;
-        this.getAllFlight();
-      }, error => {
-        console.log(error);
-      });
-    } else {
-      this.message = '';
-    }
-  }
-
-  // tslint:disable-next-line: typedef
-  editFlight(id: number) {
-    this.router.navigate(['flightedit', id]);
+  bookThisFlight(flight_id: number) {
+    this.router.navigate(['book', flight_id]);
   }
 
   bookFlight() {
