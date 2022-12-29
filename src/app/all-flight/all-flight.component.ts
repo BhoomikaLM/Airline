@@ -20,13 +20,13 @@ export class AllFlightComponent implements OnInit {
 
   getAllFlight() {
     return this.service.getAllFlight()
-    .subscribe(
-      data => {
-        this.flight = data;
-      }, error => {
-        console.log(error);
-      }
-    );
+      .subscribe(
+        data => {
+          this.flight = data;
+        }, error => {
+          console.log(error);
+        }
+      );
   }
 
   deleteFlight(flight_id: number) {
@@ -44,7 +44,6 @@ export class AllFlightComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   editFlight(id: number) {
-    this.router.navigate(['flightedit', id]);
-  }
-  
+      this.router.navigate(['flightedit', id]);
+    }
 }

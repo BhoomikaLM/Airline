@@ -19,14 +19,15 @@ export class AddFlightComponent implements OnInit {
     this.flight = new Flight();
   }
 
-  // tslint:disable-next-line: typedef
   createFlight() {
+    if (confirm('Flight added successfully!!!?')) {
     this.service.createFlight(this.flight)
     .subscribe(data => {
-      this.message = data; // read message
-      this.flight = new Flight(); // clear form
-    }, error => {
+      this.flight = new Flight();
+    }
+  , error => {
       console.log(error);
     });
+  }
   }
 }

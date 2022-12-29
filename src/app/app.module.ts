@@ -24,6 +24,8 @@ import { EditFlightComponent } from './edit-flight/edit-flight.component';
 import { AllFlightComponent } from './all-flight/all-flight.component';
 import { ViewBookdetailsComponent } from './view-bookdetails/view-bookdetails.component';
 import { DetailsComponent } from './details/details.component';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { DetailsComponent } from './details/details.component';
     EditFlightComponent,
     AllFlightComponent,
     ViewBookdetailsComponent,
-    DetailsComponent
+    DetailsComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

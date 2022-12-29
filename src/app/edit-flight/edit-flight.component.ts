@@ -18,7 +18,7 @@ export class EditFlightComponent implements OnInit {
   ngOnInit(): void {
 
     this.flight_id = this.activatedRoute.snapshot.params['flight_id'];
-    // make service call to get student object
+    
     this.service.getOneFlight(this.flight_id).subscribe(
       data => {
       this.flight = data;
@@ -28,12 +28,13 @@ export class EditFlightComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line: typedef
   updateFlight() {
+    if (confirm('Updated Flight Details Successfull!!!')) {
     this.service.updateFlight(this.flight_id, this.flight)
     .subscribe( data => {
       console.log(data);
       this.router.navigate(['allflight']);
     });
   }
+}
 }

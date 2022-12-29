@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FlightService } from '../flight.service';
 import { Register } from '../register';
-import { UdaanService } from '../udaan.service';
 
 @Component({
   selector: 'app-registration',
@@ -11,19 +11,20 @@ export class RegistrationComponent implements OnInit {
   register!: Register;
   message!: string;
 
-  constructor(private service: UdaanService) { }
+  constructor(private service: FlightService) { }
 
   ngOnInit(): void {
     this.register = new Register();
   }
 
   createRegister() {
+    if(confirm("Successfully registered!!!")) {
     this.service.createRegister(this.register)
     .subscribe(data => {
-      this.message = data; // read message
-      this.register = new Register(); // clear form
+      this.register = new Register(); 
     }, error => {
       console.log(error);
     });
   }
+}
 }

@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand navbar-dark px-2" id="bla">
+    <div class="side-nav-button p-2 me-3 text-light" (click)="SidebarToggle()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    
+    <a class="navbar-brand px-4" href="#">UDAAN</a>
+    <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" routerLink="/home">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" routerLink="/viewflight">Book Ticket</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link"  aria-current="page" href="#" routerLink="/checkin">Check-In</a>
+            </li>
+            
+        </ul>
+    </div>
+    <form class="d-flex me-5" >
+        <input class="form-control me-2" type="search" placeholder="Search...">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+
+    <div class="profile-logo dropstart">
+        <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">Bhoomika</button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a href="#" class="dropdown-item" routerLink="/registration">Sign Up</a></li>
+            <li><a href="#" class="dropdown-item" routerLink="/userlogin">LogIn</a></li>
+            <li><a href="#" class="dropdown-item">Log Out</a></li>
+        </ul>
+    </div>
+</nav>

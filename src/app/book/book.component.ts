@@ -20,16 +20,17 @@ export class BookComponent implements OnInit {
   }
 
   createBook() {
+    if (confirm('Details added successfully!!!?')) {
     this.service.createBook(this.book)
     .subscribe(data => {
-      this.message = data; // read message
+      this.message = data;
       this.gotodetails(this.book.email, this.book.flight_id)
-      this.book = new Book(); // clear form
-
+      this.book = new Book(); 
     }, error => {
       console.log(error);
     });
   }
+}
 
   gotodetails(email: string, flight_id: number) {
     this.goroute.navigate(['details', email, flight_id]);

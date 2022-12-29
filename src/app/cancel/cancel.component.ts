@@ -24,7 +24,6 @@ export class CancelComponent implements OnInit {
     });
   }
 
-
   deleteBook() {
     this.getOneBook();
     if (confirm('Do you want to delete?')) {

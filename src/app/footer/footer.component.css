@@ -83,15 +83,6 @@ a.mail:hover {
     background: rgb(186, 136, 86);
 }
 
-i.fa-phone,
-i.fa-envelope-o {
-    padding: 3px;
-}
-
-i.fa-envelope-o {
-    padding: 4px;
-}
-
 .border-right {
     border-right: 2px;
 }
@@ -138,13 +129,6 @@ footer p {
 }
 p.member{
     color:#FFF;
-}
-i.develop {
-    border: 1px red dotted;
-}
-
-.developer b {
-    color: red;
 }
 
 .icons {
