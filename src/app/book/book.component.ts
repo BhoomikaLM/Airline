@@ -29,6 +29,8 @@ export class BookComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+  } else {
+    this.message = '';
   }
 }
 

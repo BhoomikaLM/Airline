@@ -32,3 +32,6 @@ img {
 .container {
     width: calc(100%-250px);
 }
+.contact{
+    background: linear-gradient(rgb(170, 150, 122), rgba(243, 241, 238, 0.7));
+}

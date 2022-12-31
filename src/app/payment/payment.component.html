@@ -6,6 +6,24 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <div class="row">
+
+                    <P>Choose the type of Seat</P>
+                    <div class="col-md-6">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input id="credit" name="card" type="radio" class="form-check-input"
+                                    required >
+                                <label class="form-check-label" for="credit">Choose Seat</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input id="debit" name="card" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="debit">Auto assign seat</label><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <P>Choose the type of card</P>
                     <div class="col-md-12">
                         <div class="col-md-6">
@@ -18,18 +36,31 @@
                         <div class="col-md-6">
                             <div class="form-check">
                                 <input id="debit" name="card" type="radio" class="form-check-input" required>
-                                <label class="form-check-label" for="debit">Debit card</label><br><br>
+                                <label class="form-check-label" for="debit">Debit card</label>
                             </div>
-                        </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <i class="fa-brands fa-cc-visa"></i>&nbsp;
+                            <i class="fa-brands fa-cc-mastercard"></i>&nbsp;
+                            <i class="fa-regular fa-credit-card"></i>
+                        </div><br>
                     </div>
-
-                    <div class="col-md-12">
+                    
+                    <div class="col-md-6">
                         <label for="name">Amount to be Paid</label>
                         <input type="text" class="form-control" placeholder="Amount" name="amount" required>
                         <div class="invalid-feedback">
                             Amount is requried.
                         </div><br>
                     </div>
+
+                    <div class="col-md-6">
+                        <label for="name">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter your email" name="email" required>
+                        <div class="invalid-feedback">
+                            Amount is requried.
+                        </div><br>
+                    </div>
+
                     <div class="col-md-6">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Name on card" required>

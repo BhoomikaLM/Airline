@@ -7,12 +7,17 @@ h3 {
 }
 
 .container {
-    width: 400px;
-    height: 60vh;
+    width: 600px;
+    height: 40vh;
     border-radius: 20px;
+    background-color: rgb(216, 232, 232);
     box-shadow: 5px 5px 5px 5px rgb(169, 193, 193);
 }
 
 .botton {
     text-align: center;
+}
+
+.login {
+    background: linear-gradient(rgb(169, 193, 193),rgba(251, 248, 248, 0.5)),url('/assets/flight1.jpg');
 }

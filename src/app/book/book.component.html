@@ -1,4 +1,5 @@
 <div class="container">
+    <br>
     <h3>BOOK UDAAN TICKET</h3>
     <br>
     <form (ngSubmit)="createBook()">
@@ -47,9 +48,17 @@
 
                     <div class="col-md-12">
                         <label for="name">Email</label>
-                        <input type="text" class="form-control" [(ngModel)]="book.email" name="email"
-                            placeholder="you@example.com" required><br>
+                        <input type="email" email #prmEmail="ngModel" class="form-control" [(ngModel)]="book.email"
+                            name="email" id="email" placeholder="you@example.com" required #idfield="ngModel">
+                        <br>
                     </div>
+
+                    <!-- <div class="form-group">
+                        <label for="Email">Enter Email</label><br>
+                        <input type="email"  email #prmEmail="ngModel" [(ngModel)]="book.email"  placeholder="Enter email address" name="email" class="form-control" id="email" required #idfield="ngModel">
+                        <div *ngIf="prmEmail.errors?.email"> 
+                          Email not valid.
+                    </div>  -->
 
                     <div class="col-md-12">
                         <label class="form-check-label" for="flexCheckDefault">Add Food</label>&nbsp;&nbsp;
@@ -68,13 +77,15 @@
                     <br><br>
                     <div class="botton">
                         <input id="btn" type="submit" class="btn btn-primary btn-lg" value="Details" id="btn" /> |
-                        <a id="btn" class="btn btn-primary btn-lg" [routerLink]="['/viewbookdetails']" role="button">View Book Details
-                        </a>  |
+                        <a id="btn" class="btn btn-primary btn-lg" [routerLink]="['/viewbookdetails']"
+                            role="button">View
+                            Book Details
+                        </a> |
                         <!-- <a id="btn" class="btn btn-primary btn-lg" [routerLink]="['/viewbookdetails']" role="button">View Book Details
                             </a>  |
                         <a id="btn" class="btn btn-primary btn-lg" [routerLink]="['/payment']" role="button">Make
                             Payment</a> -->
-                            
+
                     </div>
                     <br><br><br>
                     <div class="botton">
