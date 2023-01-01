@@ -100,9 +100,17 @@
     background: #656e65;
   }
 
+  .seat input[type=checkbox]:disabled + label {
+    background: #656e65;
+  }
+
   h6 { 
     text-align: center;
     color: rgb(24, 84, 84);
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
+}
+
+input[type="radio"]:checked{
+  visibility:hidden;
 }

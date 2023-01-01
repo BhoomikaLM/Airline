@@ -10,8 +10,8 @@ h3 {
     width: 600px;
     height: 40vh;
     border-radius: 20px;
-    background-color: rgb(216, 232, 232);
-    box-shadow: 5px 5px 5px 5px rgb(169, 193, 193);
+    /* background-color: rgb(216, 232, 232);
+    box-shadow: 5px 5px 5px 5px rgb(169, 193, 193); */
 }
 
 .botton {

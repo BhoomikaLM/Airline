@@ -17,6 +17,8 @@ import { AllFlightComponent } from './all-flight/all-flight.component';
 import { EditFlightComponent } from './edit-flight/edit-flight.component';
 import { ViewBookdetailsComponent } from './view-bookdetails/view-bookdetails.component';
 import { DetailsComponent } from './details/details.component';
+import { TestComponent } from './test/test.component';
+import { PaymentSuccessComponent } from './payment-success/payment-success.component';
 
 
 const routes: Routes = [
@@ -38,7 +40,10 @@ const routes: Routes = [
   {path:'flightedit/:flight_id', component:EditFlightComponent, pathMatch:'full'},
   {path:'allflight', component:AllFlightComponent, pathMatch:'full'},
   {path:'viewbookdetails', component:ViewBookdetailsComponent,pathMatch:'full'},
-  {path:'details/:email/:flight_id', component:DetailsComponent}
+  {path:'details/:email/:flight_id', component:DetailsComponent},
+  {path:'paymentsuccess', component:PaymentSuccessComponent},
+  {path:'test', component:TestComponent},
+
 ];
 
 @NgModule({

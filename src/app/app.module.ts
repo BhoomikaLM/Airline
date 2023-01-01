@@ -26,6 +26,8 @@ import { ViewBookdetailsComponent } from './view-bookdetails/view-bookdetails.co
 import { DetailsComponent } from './details/details.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { TestComponent } from './test/test.component';
+import { PaymentSuccessComponent } from './payment-success/payment-success.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ViewBookdetailsComponent,
     DetailsComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    TestComponent,
+    PaymentSuccessComponent
   ],
   imports: [
     BrowserModule,

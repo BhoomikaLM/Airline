@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Flight } from './flight';
 import { Book } from './book';
 import { Register } from './register';
+import { Payment } from './payment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class FlightService {
   private basePathBookFlight = 'http://localhost:8095/rest/flight/book';
   private basePathBook = 'http://localhost:8095/rest/bookticket';
   private basePathRegister = 'http://localhost:8095/rest/register';
+  private basePathPayment = 'http://localhost:8095/rest/payment';
 
 
   constructor(private http: HttpClient) { }
@@ -61,5 +63,9 @@ export class FlightService {
 
   getOneBook(email: string): Observable<Book> {
     return this.http.get<Book>(`${this.basePathBook}/one/${email}`);
+  }
+
+  createPayment(payment: Payment): Observable<any> {
+    return this.http.post(`${this.basePathPayment}/save`, payment, { responseType: 'text' });
   }
 }
