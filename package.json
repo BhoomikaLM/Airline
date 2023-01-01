@@ -18,7 +18,11 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "iconify": "^1.4.0",
+    "iconify-icon": "^1.0.2",
+    "jquery": "^3.6.3",
     "rxjs": "~7.5.0",
+    "short-unique-id": "^4.4.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

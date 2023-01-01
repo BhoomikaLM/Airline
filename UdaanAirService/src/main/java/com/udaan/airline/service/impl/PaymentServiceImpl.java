@@ -16,7 +16,7 @@ public class PaymentServiceImpl implements PaymentService {
 	private PaymentRepository repo;
 	
 	@Override
-	public Long savePayment(Payment f) {
+	public String savePayment(Payment f) {
 		f = repo.save(f);
 		return f.getCard_num();
 	}

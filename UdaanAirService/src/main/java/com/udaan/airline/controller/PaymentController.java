@@ -49,7 +49,7 @@ public class PaymentController {
 
 			log.info("About to call save Operation");
 
-			Long card_num = service.savePayment(payment);
+			String card_num = service.savePayment(payment);
 			log.debug("Payment saved with id "+card_num);
 
 			String body = "Payment '"+card_num+"' added successfully";
@@ -109,7 +109,7 @@ public class PaymentController {
 	
 	@GetMapping("/one/{card_num}")
 	public ResponseEntity<?> getOnePayment(
-			@PathVariable Long card_num
+			@PathVariable String card_num
 			) 
 	{
 		log.info("Entered into Get one Payment method");
@@ -140,7 +140,7 @@ public class PaymentController {
 	
 	@DeleteMapping("/remove/{card_num}")
 	public ResponseEntity<String> removePayment(
-			@PathVariable Long card_num
+			@PathVariable String card_num
 			)
 	{
 
@@ -177,7 +177,7 @@ public class PaymentController {
 	
 	@PutMapping("/modify/{flight_id}")
 	public ResponseEntity<String> updatePayment(
-			@PathVariable Long card_num,
+			@PathVariable String card_num,
 			@RequestBody Payment payment
 			)
 	{

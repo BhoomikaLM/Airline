@@ -13,9 +13,17 @@ public class Payment {
 	private Integer Amount;
 	private String name;
 	@Id
-	private Long card_num;
+	private String card_num;
 	private String exp_date;
 	private Integer cvv;
+	private String pnr;
+	
+	public String getPnr() {
+		return pnr;
+	}
+	public void setPnr(String pnr) {
+		this.pnr = pnr;
+	}
 	public String getCard() {
 		return card;
 	}
@@ -34,10 +42,10 @@ public class Payment {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Long getCard_num() {
+	public String getCard_num() {
 		return card_num;
 	}
-	public void setCard_num(Long card_num) {
+	public void setCard_num(String card_num) {
 		this.card_num = card_num;
 	}
 	public String getExp_date() {
